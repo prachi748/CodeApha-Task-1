@@ -4,13 +4,12 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "codealpha",
-  port: 3307
+  database: "codealpha_ecommerce"
 });
 
-db.connect((err) => {
-  if (err) {
-    console.log("DB Error:", err);
+db.connect(err => {
+  if(err){
+    console.log("DB Error", err);
   } else {
     console.log("Database Connected");
   }
